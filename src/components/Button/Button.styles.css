@@ -1,0 +1,77 @@
+
+.Button {
+  border-radius: 8px;
+}
+
+.Button--Small {
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.Button--Medium {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.Button--Primary--Contained {
+  border: 1px solid #4B7A8A;
+  color: #FFFFFF;
+  background: #4B7A8A;
+}
+.Button--Primary--Contained:active,
+.Button--Primary--Contained:focus,
+.Button--Primary--Contained:hover {
+  border: 1px solid #245866;
+  background: #245866;
+}
+
+.Button--Secondary--Contained {
+  border: 1px solid #EEEEEE;
+  color: #000000;
+  background: #EEEEEE;
+}
+.Button--Secondary--Contained:active,
+.Button--Secondary--Contained:focus,
+.Button--Secondary--Contained:hover {
+  border: 1px solid #DDDDDD;
+  background: #DDDDDD;
+}
+
+.Button--Primary--Contained:disabled,
+.Button--Secondary--Contained:disabled {
+  border: 1px solid #EEEEEE;
+  color: #909090;
+  background: #EEEEEE;
+}
+
+.Button--Primary--Outlined {
+  border: 1px solid #4B7A8A;
+  color: #4B7A8A;
+  background: #FFFFFF;
+}
+.Button--Primary--Outlined:active,
+.Button--Primary--Outlined:focus,
+.Button--Primary--Outlined:hover {
+  border: 1px solid #245866;
+  background: #F5F9F9;
+}
+
+.Button--Secondary--Outlined {
+  border: 1px solid #EEEEEE;
+  color: #000000;
+  background: #FFFFFF;
+}
+.Button--Secondary--Outlined:active,
+.Button--Secondary--Outlined:focus,
+.Button--Secondary--Outlined:hover {
+  border: 1px solid #DDDDDD;
+  background: #FFFFFF;
+}
+
+.Button--Primary--Outlined:disabled,
+.Button--Secondary--Outlined:disabled {
+  border: 1px solid #EEEEEE;
+  color: #909090;
+  background: #FFFFFF;
+}
