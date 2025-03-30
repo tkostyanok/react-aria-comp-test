@@ -1,7 +1,15 @@
-export interface NumericInputProps {
+import type { NumberFieldProps as RACNumberFieldProps} from 'react-aria-components';
+import type { SizeType } from '../../interfaces';
+
+export interface NumericInputProps extends Omit<RACNumberFieldProps, 'className' | 'style'> {
   /**
-   * If `true`, the NumericInput component is disabled.
-   * @default false
+   * The label content for the NumericInput component.
+   * @default undefined
    */
-  disabled?: boolean;
+  label?: string;
+  /**
+   * The size of the NumericInput component.
+   * @default 'small'
+   */
+  size?: SizeType;
 }

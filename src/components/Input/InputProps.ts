@@ -1,13 +1,11 @@
+import type { TextFieldProps as RACTextFieldProps} from 'react-aria-components';
+
 import type { SizeType } from '../../interfaces';
 
-export interface InputProps {
-  /**
-   * If `true`, the Input component is disabled.
-   * @default false
-   */
-  disabled?: boolean;
+export interface InputProps extends Omit<RACTextFieldProps, 'className' | 'style'> {
   /**
    * The label content for the Input component.
+   * @default undefined
    */
   label?: string;
   /**

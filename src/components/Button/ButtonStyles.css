@@ -1,0 +1,110 @@
+@import "@react-aria/example-theme";
+
+.react-aria-Button {
+  appearance: none;
+  background: var(--primary--main);
+  border: 1px solid var(--primary--main);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+  outline: none;
+  padding: 4px 8px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &[slot=decrement] {
+    border-radius: 2px;
+  }
+
+  &[slot=increment] {
+    border-radius: 2px;
+  }
+}
+
+.Button--Small {
+  padding: 4px 8px;
+}
+.Button--Medium {
+  padding: 8px 16px;
+  font-size: 1.1rem;
+}
+
+.Button--Primary--Contained {
+  border: 1px solid var(--primary--main);
+  color: var(--white);
+  background: var(--primary--main);
+
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid var(--primary--dark);
+    background: var(--primary--dark);
+  }
+
+  &:disabled {
+    border: 1px solid var(--secondary--main);
+    color: var(--grey--500);
+    background: var(--secondary--main);
+  }
+}
+
+.Button--Secondary--Contained {
+  border: 1px solid var(--secondary--main);
+  color: var(--black);
+  background: var(--secondary--main);
+
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid var(--grey--300);
+    background: var(--grey--300);
+  }
+
+  &:disabled {
+    border: 1px solid var(--secondary--main);
+    color: var(--grey--500);
+    background: var(--secondary--main);
+  }
+}
+
+.Button--Primary--Outlined {
+  border: 1px solid var(--primary--main);
+  color: var(--primary--main);
+  background:  var(--white);
+
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid var(--primary--dark);
+    background: var(--surface);
+  }
+
+  &:disabled {
+    border: 1px solid var(--secondary--main);
+    color: var(--grey--500);
+    background:  var(--white);
+  }
+}
+
+.Button--Secondary--Outlined {
+  border: 1px solid var(--secondary--main);
+  color: var(--black);
+  background:  var(--white);
+
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid var(--grey--500);
+    background:  var(--white);
+  }
+
+  &:disabled {
+    border: 1px solid var(--secondary--main);
+    color: var(--grey--500);
+    background:  var(--white);
+  }
+}
+

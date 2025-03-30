@@ -1,0 +1,54 @@
+@import "@react-aria/example-theme";
+
+.react-aria-TextField {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  color: var(--primary--main);
+
+  .react-aria-Input,
+  .react-aria-TextArea {
+    background: var(--white);
+    border: 1px solid var(--grey--400);
+    border-radius: 8px;
+    color: var(--black);
+    font-weight: 500;
+    margin: 0;
+    padding: 4px 8px;
+
+    &:disabled {
+      background: var(--grey--50);
+      color: var(--grey-500);
+      outline: 1px solid var(--grey--400);
+      outline-offset: -1px;
+    }
+    &:hover {
+      outline: 1px solid var(--grey-500);
+      outline-offset: -1px;
+    }
+    &:active,
+    &:focus {
+      outline: 2px solid var(--primary--main);
+      outline-offset: -1px;
+    }
+  }
+  
+  .Input--Small {
+    height: 0.9rem;
+    font-size: 0.9rem;
+  }
+  
+  .Input--Medium {
+    height: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .Input--Label {
+    color: var(--grey--800);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .Input--Label--Disabled {
+    color: var(--grey--400);
+  } 
+}

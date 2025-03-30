@@ -1,0 +1,44 @@
+@import "@react-aria/example-theme";
+
+.react-aria-NumberField {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  .react-aria-Group {
+    display: flex;
+    width: fit-content;
+    border: 1px solid var(--grey--400);
+    border-radius: 4px;
+    padding: 2px;
+
+    &[data-focus-within] {
+      outline: 1px solid var(--grey--500);
+    }
+
+    &:disabled {
+      background: var(--grey--50);
+      color: var(--grey--500);
+      outline: 1px solid var(--grey--400);
+      outline-offset: -1px;
+    }
+  }
+
+  .react-aria-Input {
+    background: var(--white);
+    border: none;
+    color: var(--black);
+    flex: 1;
+    font-size: 1rem;
+    font-weight: 500;
+    outline: none;
+    text-align: center;
+    z-index: 1;
+
+    &:disabled {
+      background: var(--grey--50);
+      color: var(--grey--500);
+    }
+
+  }
+}

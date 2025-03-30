@@ -6,7 +6,7 @@ export const generateButtonClasses = (
   size?: SizeType,
   variant?: ButtonVariant) => 
   classNames(
-    'Button', 
+    'react-aria-Button', 
     {
       'Button--Primary--Contained': color === 'primary' && variant === 'contained',
       'Button--Primary--Outlined': color === 'primary' && variant === 'outlined',

@@ -5,10 +5,21 @@ export const generateInputClasses = (
   size?: SizeType,
 ) => 
   classNames(
-    'Input', 
+    'react-aria-Input', 
     {
       'Input--Small': size === 'small',
       'Input--Medium': size === 'medium',
+    }, 
+    classNames
+  );
+
+export const generateInputLabelClasses = (
+  disabled?: boolean,
+) => 
+  classNames(
+    'Input--Label', 
+    {
+      'Input--Label--Disabled': disabled,
     }, 
     classNames
   );

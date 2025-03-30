@@ -1,24 +1,23 @@
 import { TextField, Label, Input as RACInput } from 'react-aria-components';
 
-import { generateInputClasses } from './helper';
+import { generateInputClasses, generateInputLabelClasses } from './helper';
 
 import type { InputProps } from './InputProps';
 
-import './Input.styles.css';
+import './InputStyles.css';
 
 export const Input = ({
-  disabled = false,
   label,
   size = 'small',
+  ...props
 }: InputProps) => {
-
-
   const inputClasses = generateInputClasses(size);
-  const labelClasses = disabled ?
-    'Input--Label--Disabled' : 'Input--Label';
+  const labelClasses = generateInputLabelClasses(props?.isDisabled);
   
   return (
-    <TextField className='Input--Wrapper' isDisabled={disabled}>
+    <TextField
+      {...props}
+    >
       {label
         ? <Label className={labelClasses}>{label}</Label>
         : null

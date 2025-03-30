@@ -4,15 +4,15 @@ import { generateButtonClasses } from './helper';
 
 import type { ButtonProps } from './ButtonProps';
 
-import './Button.styles.css';
+import './ButtonStyles.css';
 
 export const Button = ({
   color = 'primary',
-  disabled = false,
   id,
   size = 'small',
   text,
-  variant = 'contained'
+  variant = 'contained',
+  ...props
 }: ButtonProps) => {
   if (!text) { 
     return null;
@@ -23,8 +23,8 @@ export const Button = ({
   return (
     <RACButton
       className={buttonClasses}
-      isDisabled={disabled}  
       id={id}
+      {...props}
     > 
       {text || null}
     </RACButton>
