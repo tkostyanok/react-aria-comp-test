@@ -1,6 +1,7 @@
 import { NumberField, Label, Group, Input } from 'react-aria-components';
-
 import { Button } from '../Button';
+
+import { generateNumericInputLabelClasses } from './helper';
 
 import type { NumericInputProps } from './NumericInputProps';
 
@@ -11,6 +12,7 @@ export const NumericInput = ({
   size = 'small',
   ...props
 }: NumericInputProps) => {
+  const labelClasses = generateNumericInputLabelClasses(props?.isDisabled);
 
   return (
     <NumberField
@@ -19,7 +21,7 @@ export const NumericInput = ({
       {...props}
     >
       {label
-        ? <Label>{label}</Label>
+        ? <Label className={labelClasses} >{label}</Label>
         : null
       }
       <Group>

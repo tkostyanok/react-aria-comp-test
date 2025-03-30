@@ -1,9 +1,7 @@
-@import "@react-aria/example-theme";
-
 .react-aria-NumberField {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  /* width: fit-content; */
 
   .react-aria-Group {
     display: flex;
@@ -32,6 +30,7 @@
     font-size: 1rem;
     font-weight: 500;
     outline: none;
+    width: calc(100%);
     text-align: center;
     z-index: 1;
 
@@ -39,6 +38,14 @@
       background: var(--grey--50);
       color: var(--grey--500);
     }
-
   }
+
+  .NumberField--Label {
+    color: var(--grey--800);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .NumberField--Label--Disabled {
+    color: var(--grey--400);
+  } 
 }

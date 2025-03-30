@@ -14,6 +14,7 @@
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
+  width: inherit;
 
   &[slot=decrement] {
     border-radius: 2px;

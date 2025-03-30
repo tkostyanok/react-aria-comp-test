@@ -5,7 +5,7 @@
   grid-template-areas: "label output"
                        "track track";
   grid-template-columns: 1fr auto;
-  max-width: 300px;
+  min-width: 200px;
   color: var(--grey--dark);
 
   .react-aria-Label {
@@ -48,7 +48,7 @@
 
   &[data-orientation=horizontal] {
     flex-direction: column;
-    width: 300px;
+    width: inherit;
 
     .react-aria-SliderTrack {
       height: 30px;
