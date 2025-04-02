@@ -36,6 +36,7 @@ export const App = () => {
 
     const data = Object.fromEntries(new FormData(event.currentTarget));
     console.log('From data: ', data);
+    alert(`From data: ${JSON.stringify(data)}`);
   }
   return (
     <div>

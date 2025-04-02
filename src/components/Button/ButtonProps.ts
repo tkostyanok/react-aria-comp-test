@@ -7,7 +7,7 @@ export interface ButtonProps extends Omit<RACButtonProps, 'className' | 'style'>
    * The color of the Button component.
    * @default 'primary'
    */
-  color: ColorType;
+  color?: ColorType;
   /**
    * Icon placed after the Button text.
    */
@@ -31,5 +31,5 @@ export interface ButtonProps extends Omit<RACButtonProps, 'className' | 'style'>
    * The variant to use.
    * @default 'contained'
    */
-  variant: ButtonVariant;
+  variant?: ButtonVariant;
 }
