@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import type { ButtonProps as RACButtonProps } from 'react-aria-components';
 import type { ButtonVariant, ColorType, SizeType } from '../../interfaces';
 
@@ -7,12 +8,19 @@ export interface ButtonProps extends Omit<RACButtonProps, 'className' | 'style'>
    * @default 'primary'
    */
   color: ColorType;
-  id?: string;
+  /**
+   * Icon placed after the Button text.
+   */
+  endIcon?: ReactNode;
   /**
    * The size of the Button component.
    * @default 'small'
    */
   size?: SizeType;
+  /**
+   * Icon placed before the Button text.
+   */
+  startIcon?: ReactNode;
   /**
    * The text to be displayed inside the Button component.
    * If not provided, the Button will not be rendered.

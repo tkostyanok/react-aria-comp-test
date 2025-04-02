@@ -8,4 +8,24 @@
   margin: 2rem;
   min-width: 400px;
   width: 400px;
+  
+  .Form--Row--1 {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .Align--Content--End {
+    align-content: 'end'
+  }
+
+  .Form--Row--2 {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .Width--100 {
+    width: 100%;
+  }
 }

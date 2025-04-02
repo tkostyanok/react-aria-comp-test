@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Form } from 'react-aria-components';
 import { Button, Input, NumericInput, Slider } from './components';
 
-import { InitialFormData } from './interfaces';
+import type { InitialFormData } from './interfaces';
+
+import DeleteIcon from './assets/DeleteIcon.svg';
 import './App.css';
 
 const initialData: InitialFormData = {
@@ -33,7 +35,7 @@ export const App = () => {
     event.preventDefault();
 
     const data = Object.fromEntries(new FormData(event.currentTarget));
-    console.log('data', data);
+    console.log('From data: ', data);
   }
   return (
     <div>
@@ -48,27 +50,18 @@ export const App = () => {
             size='medium'
           />
         </div>
-        <div
-          style={{
-            display: 'flex',
-            gap: '2rem'
-          }}
-        >
+        <div className='Form--Row--1'>
           <div>
             <NumericInput
               defaultValue={0}
               label='Size (GB)'
               name='dataSize'
-              size='small'
               onChange={setDataSize}
+              size='small'
               value={formData.dataSize}
             />
           </div>
-          <div
-            style={{
-              alignContent: 'end'
-            }}
-          >  
+          <div className='Align--Content--End'>  
             <Slider
               defaultValue={formData.dataSize}
               label='dataSize'
@@ -82,38 +75,23 @@ export const App = () => {
             />
           </div>
         </div>
-        <div 
-          style={{
-            display: 'flex',
-            gap: '1rem',
-            justifyContent: 'space-between',
-            width: '100%'
-          }}
-        >
-          <div
-            style={{
-              width: '100%'
-            }}
-          >
+        <div className='Form--Row--2'>
+          <div className='Width--100'>
             <Button
               color='primary'
+              size='medium'
+              startIcon={DeleteIcon}
               text='Clear'
               type='reset'
-              size='medium'
               variant='outlined'
             />
-
           </div>
-          <div
-            style={{
-              width: '100%'
-            }}
-          >  
+          <div className='Width--100'>
             <Button
               color='primary'
+              size='medium'
               text='Submit'
               type='submit'
-              size='medium'
               variant='contained'
             />
             </div>

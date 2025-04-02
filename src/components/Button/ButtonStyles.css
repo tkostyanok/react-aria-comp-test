@@ -1,19 +1,22 @@
 @import "@react-aria/example-theme";
 
 .react-aria-Button {
+  align-items: center;
   appearance: none;
   background: var(--primary--main);
   border: 1px solid var(--primary--main);
   border-radius: 8px;
   color: var(--white);
+  display: flex;
   font-size: 0.9rem;
   font-weight: 500;
+  justify-content: center;
+  gap: 0.5rem;
   margin: 0;
   outline: none;
   padding: 4px 8px;
   text-align: center;
   text-decoration: none;
-  vertical-align: middle;
   width: inherit;
 
   &[slot=decrement] {
@@ -23,8 +26,26 @@
   &[slot=increment] {
     border-radius: 2px;
   }
+  
+  .Button--Image {
+    margin: -0.3rem;
+  }
+  .Button--Image--Primary {
+    filter: invert(44%) sepia(43%) saturate(399%) hue-rotate(149deg) brightness(91%) contrast(85%);
+  }
+  .Button--Image-Secondary{
+    filter: invert(100%) sepia(1%) saturate(1845%) hue-rotate(311deg) brightness(122%) contrast(87%);
+  }
+
+  .Button--Image--Small {
+    height: 1.2rem;
+  }
+  .Button--Image--Medium {
+    height: 1.5rem;
+  }
 }
 
+  
 .Button--Small {
   padding: 4px 8px;
 }
